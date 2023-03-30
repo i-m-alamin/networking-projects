@@ -1,0 +1,31 @@
+The given code consists of a simple Java socket programming example in which the client sends a request to the server and the server responds with the current date and time. Here's a documentation of the code:
+
+Client.java
+The Client.java file contains the client-side code of the socket programming example. The purpose of this code is to create a socket connection with the server and receive the current date and time from the server.
+
+Main Function
+The main function of the Client class performs the following steps:
+
+Create a new Socket object with the hostname localhost and port number 7777.
+Create an InputStreamReader object to read the input stream from the server.
+Create a BufferedReader object to read the data from the input stream.
+Read the response from the server using the readLine() method of the BufferedReader object.
+Print the response to the console.
+Close the socket connection.
+Server.java
+The Server.java file contains the server-side code of the socket programming example. The purpose of this code is to listen for incoming socket connections from the client and respond with the current date and time.
+
+Main Function
+The main function of the Server class performs the following steps:
+
+Start an infinite loop to listen for incoming socket connections.
+Create a new ServerSocket object with the port number 7777.
+Print a message to the console indicating that the server is running.
+Wait for a client to connect using the accept() method of the ServerSocket object.
+Print a message to the console indicating that a client has connected.
+Get the current date and time using the Date class.
+Create a DataOutputStream object to write the data to the output stream.
+Create a PrintWriter object to write the data to the output stream.
+Write the current date and time to the output stream using the println() method of the PrintWriter object.
+Close the ServerSocket object to stop listening for new connections.
+Note that the server will keep running indefinitely until it is terminated manually.
