@@ -1,0 +1,18 @@
+Server Class
+public static void main(String[] args)
+This is the main method of the Server class. It creates a ServerSocket object with the port number 8789 and listens for incoming connections from clients. When a client connects, it creates a Socket object and sets up the input and output streams to communicate with the client. It then sends a message "hello world." to the client using the writer.println() method. After that, it reads a line of text from the client using the reader.readLine() method and sends the ASCII codes of each character in the line back to the client using the writer.println() method.
+
+Client Class
+public static void main(String[] args)
+This is the main method of the Client class. It creates a Socket object and connects to the server at the host localhost and port number 8789. It sets up the input and output streams to communicate with the server. It then reads a line of text from the server using the reader.readLine() method and prints it to the console. It then reads a line of text from the user using the Scanner class and sends it to the server using the writer.println() method. After that, it reads the ASCII codes of each character in the line sent back by the server using the reader.readLine() method and prints them to the console.
+
+Variables
+s: A Socket object representing the connection to the server.
+input: An InputStreamReader object that reads data from the server's input stream.
+reader: A BufferedReader object that reads data from the input object.
+output: A DataOutputStream object that writes data to the server's output stream.
+writer: A PrintWriter object that writes data to the output object.
+sc: A Scanner object that reads data from the user's input stream.
+from_server: A String object that stores the line of text read from the server.
+c: A String object that stores the line of text read from the user.
+x: An int variable used to iterate through the characters in c.
